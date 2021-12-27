@@ -1,0 +1,305 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>PS4_Jail_Break Host by Games_World </title>
+<style type="text/css">
+    html, body{
+background-image: url('main.jpg');
+height: 100%;
+ background-position: center;
+ background-size: cover;
+background-attachment: fixed;
+background-repeat:no-repeat;
+margin: 0;
+height: 100%;
+padding: 0;
+overflow: hidden;
+font-family: sans-serif;
+font-size: 20px;
+font-weight: bold;
+text-align: center;  
+width: 100%;
+overflow: hidden;
+}
+ button {
+            background:rgba(0,0,0,0.5);
+		    box-shadow: 0 5px 20px 0 white;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: 40px;            
+            text-align: center;
+            padding: 6px;
+            margin: 6px;
+}
+button:hover {
+            box-shadow: 0 5px 50px 0 white;
+            background-color: #0F0F53;
+            color: white;
+            border-radius: 10px;
+}
+#clock{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 6px;
+ font-weight:bold;
+ font-size:28px;
+  color: white;
+}
+#date {
+ float:left;
+ margin-left:1.25%;
+ font-weight:bold;
+ margin-top: 6px;
+ font-size:28px;
+ color: white;
+}
+ .content {
+  width:80%;
+  height:22%;
+  margin-left:9.5%;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  margin-top:1%;
+  font-size:10px;
+  text-align:center;
+  border-radius:30px;
+  padding:20px;
+  line-height:25px;
+ }
+ .title {
+  font-size:40px;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-weight:bolder;
+  margin-bottom:10px;
+ }
+ .yellow {
+  color:yellow;
+ }
+ .hue {
+  color:yellow;
+  padding:10px;
+  border-radius:10px;
+  animation:hue 5s linear infinite;
+  -webkit-animation: hue 5s linear infinite;
+  box-shadow: 0px 0px 50px yellow;
+  color:white;
+  background:rgba(255,255,0,0.4);
+ }
+ .hue:hover{
+  color:yellow;
+  background:transparent;
+ }
+ @keyframes hue{
+ 0%{
+ filter:hue-rotate(0deg);
+ -webkit-filter:hue-rotate(0deg);
+ }
+ 10%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 20%{
+ box-shadow: 1px 1px 50px yellow;
+ }
+ 30%{
+ box-shadow: 1px 0px 50px yellow;
+ }
+ 40%{
+  box-shadow: 1px -1px 50px yellow;
+ }
+ 50%{
+ box-shadow: 0px -1px 50px yellow;
+ }
+ 60%{
+ box-shadow: -1px -1px 50px yellow;
+ }
+ 70%{
+ box-shadow: -1px 0px 50px yellow;
+ }
+ 80%{
+ box-shadow: -1px 1px 50px yellow;
+ }
+ 90%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 100%{
+ filter:hue-rotate(360deg);
+ -webkit-filter:hue-rotate(360deg);
+ }
+ }
+ .text {
+  padding-bottom:50px;
+ }
+  .back {
+   font-size:25px;
+   margin-top:10px;
+   display:block;
+   line-height:55px;
+   width:20%;
+   text-decoration:none;
+   height:50px;
+   background:white;
+   color:black;
+   border-radius:15px;
+  }
+  .back:hover{
+   border:2px solid white;
+   background:transparent;
+   box-sizing:border-box;
+   color:white;
+  }
+  .pointer {cursor: pointer;}
+  #clock{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 5px;
+ font-weight:bold;
+ font-size:16px;
+  color: white;
+  font-family: Almendra Display;
+			font-style:italic;
+}
+#clock{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 20px;
+ font-weight:bold;
+ font-size:12px;
+  color: white;
+  font-family: Almendra Display;
+			font-style:italic;
+}
+#date {
+ float:left;
+ margin-left:1.25%;
+ font-weight:bold;
+ margin-top: 20px;
+ font-size:12px;
+ color: white;
+ font-family: Almendra Display;
+			font-style:italic;}
+			button {
+width: 140px;
+height: 30px;
+color: white;
+background-color:transparent;
+text-align: center;
+font-size:12px;
+font-style:italic;
+border-radius: 10px;
+opacity: .85;
+}
+button:hover {
+background-color:white;
+color:black;
+border-radius: 25px;
+font-family:Almendra Display;
+font-style:italic;
+font-size: 12px;
+font-weight:bold;
+}
+
+.content 
+{
+width:80%;
+margin-left:7.5%;
+color:white;
+margin-top:0%;
+font-size:12px;
+text-align:center;
+border-radius:30px;
+padding:20px;
+line-height:10px;
+}
+* {
+box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+float: left;
+width: 45%;
+Padding: 10px;
+height: 100px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+</style>
+<script>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,0);
+</script>
+</head>
+
+<body style='background-color:#1A1920'>
+<hr><span id="date" ></span><span id="clock" ></span>
+<h1 style='font-size:16px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white'>PS4_Jail_Break Host by Games_World</h1>
+<h1 style='font-size:14px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white'>Hosur</h1><hr>
+<marquee style=' width:100%;'> <a style='font-size:12px;text-align:center;color:#8B0000; font-family:Almendra Display;font-style:italic;text-align:center;font-weight:bold;'>"Once you have enabled debug settings, do not ever go into "*Debug Settings - System - IDU Mode", or your PS4 will brick!"</a></marquee>
+
+<h1 style='font-size:14px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white'>Choose Your Firmware </h1>
+<div class="row"> <div class="column">
+<h1 id=progress style='font-size:14px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;' >6.72_Menu</h1>
+<a href="PS4_672AJB/index.html">
+<button id="button-Payload"  onMouseOver="progress.innerHTML='PS4_Host for 6.72 without payload sender-Auto JB'"; onmouseout="progress.innerHTML='6.72_Menu'"  type="button">
+<b>Fw_6.72_Auto_JB</B></button></a>	
+</div>
+<div class="column">
+<h1 id=progres style='font-size:14px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;' >9.00_Menu</h1> 
+<a href="PS4_900AJB/index.html"><button id="button-Payload"  class="pointer" onMouseOver="progres.innerHTML='PS4_Host for 9.00 without payload sender-Auto JB'"; onmouseout="progres.innerHTML='9.00_Menu'"  type="button">
+<b>Fw_9.00_Auto_JB</B></button></a>	 
+<a href="PS4_900JB/index.html"><button id="button-Payload"  class="pointer" onMouseOver="progres.innerHTML='PS4_Host for 9.00 Manual_JB'"; onmouseout="progres.innerHTML='9.00_Menu'"  type="button">
+<b>Fw_9.00_Manual_JB</B></button></a>
+ </div>
+
+<div class="content" >
+ 	<div class="text" >
+ 	        <br><span style='font-size:12px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white' >Designed, Compiled by :</span >&nbsp;&nbsp; 
+			<span style='font-size:12px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white' class="hue" >PSJ</span><br>
+ 	       <br> <span style='font-size:12px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white'  >Special Thanks To :</span >&nbsp;&nbsp; 
+			<a style='font-size:12px;text-align:center;color:white;font-family:Almendra Display;font-style:italic;text-shadow: 4px 4px 4px black;color:white'>Sleirsgoevy , Al Azif , ChendoChap , SiSTRo ,Specter ,Znullptr ... </a>
+	    </div>
+ </div>
+</div>
+<div style="text-align:center"  id="MyItems">
+<main style="position: relative;color:white;font-size:12px;font-family: Almendra Display;font-style:italic;font-weight:bold;'>  
+	 <div id="instructions">
+        <h1 style="font-weight:bold;font-size:12px;">Jailbreak Process and Troubleshooring isntructions for Mauual JB / Auto JB' :</h1>
+		<p>Choose your PS4 firmware to jailbreak from about button .Then page will automatically cached in your PS4 browser. You can disconnect your PS4 from the Internet and, from now on keep using the jailbreak offline. To make this easier, feel free to add a bookmark.</p>
+		 <p>To jailbreak, click on the payload that you want to load. Provided everything goes well, in about 20 seconds you will see the message <i>"You're all set!"</i>, followed by <i>"There is not enough free system memory"</i>. Usually though, you will need multiple attempts.</p> 
+            <b>"Failed to setup a relative read primitive"</b>: This can happen when you move your controller's analog sticks while the jailbreak is still trying to load. Do not move the analog sticks. After pressing "OK", you can resume jailbreaking without rebooting.</li>
+            <b>"You're all set!"</b>: The jailbreak was successful, and the selected payload has been loaded into memory.</li>
+        <p>a.)Manual_JB:(FW 9.00)</p>
+		<li>i.)Click Golden hen to jailbreak your console.</li>
+		<li>ii.)Rest of instructions are similar to Auto_JB. </li>
+		<p>b.)Auto_JB:(FW 9.00)</p>
+		    <li>i.)In about a minute you'll be prompted to insert the USB drive you prepared. Insert the USB drive, wait for the notification about the invalid format to pop up, then eject the drive and click OK.</li>
+			<li>ii.)Important: never leave the drive inserted during a reboot!</li>
+            <li>iii.)You will get a message saying "There is not enough free system memory". This is normal, just click OK.</li>
+			<li>iv.)After 20 more seconds you will get an alert saying "You're all set!", followed by "There is not enough free system memory". This means that everything has gone well.</li>
+            <li>v.)If something went wrong during the process, you may get an alert with an error. In this case you must reboot your PS4, preferrably without closing the dialog box.</li>
+			<li>vi.)If the system hangs for more than a minute (may require more time on slow Internet connections), reboot your PS4 and try again.</li>
+	        <li>vii.)If the system crashes (looks like instant powerdown), press the power button on the PS4 (NOT on the gamepad) until it turns on again, then retry.</li>
+</div>			
+	
+       		
+					 
+</body>
+</html>
